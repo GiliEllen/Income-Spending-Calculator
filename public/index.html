@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dist/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <h2>Please log Money movement:</h2>
+        <div class="wrapper__form_wrapper">
+            <form id="formy">
+                <div class="type_container">
+                    <label for="type">Is this income or spending?</label>
+                    <select name="type" id="incomeOrSpending">
+                        <option value="income">income</option>
+                        <option value="spending">Spending</option>
+                    </select>
+                </div>
+                <div class="amount_container">
+                    <label for="amount">how much?</label>
+                    <input type="number" name="amount" id="amount">
+                </div>
+                <button type="submit">Add</button>
+            </form>
+        </div>
+    </div>
+    <div class="mega_wrapper">
+        <div class="mega_wrapper__list_wrapper">
+            <div class="list_header_wrapper">
+                <h4>Income VS Spending</h4>
+                <div class="mini_list_wrapper">
+                    <div class="mini_list_wrapper__income_list">
+                        <ul id="income_list"></ul>
+                    </div>
+                    <div class="mini_list_wrapper__spending_list">
+                        <ul id="spending_list"></ul>
+                    </div>
+                </div>
+            </div>
+            <div class="total_balance">Your Total balance is:<span id="balanceInnerText"></span></div>
+        </div>
+        <div class="mega_wrapper__graphs">
+            <h4>Graph</h4>
+            <form id="graph_submit_holder">
+                <label for="type">choose graph type:</label>
+                <select name="type" id="incomeOrSpending2">
+                    <option value="income">income</option>
+                    <option value="spending">Spending</option>
+                </select>
+                <button id="graphCreator" type="submit">create graphs</button>
+            </form>
+            <div class="bars_wrapper"></div>
+        </div>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>
